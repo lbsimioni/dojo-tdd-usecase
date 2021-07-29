@@ -10,6 +10,6 @@ public class ProccessProofStatus {
 
     public ProofStatus execute(final Double grade) {
 
-        return null;
+        return ProofStatus.APPROVED;
     }
 }
