@@ -1,4 +1,4 @@
-package br.com.dojo.tdd.usecases;
+package br.com.dojo.tdd.unit.test.usecases;
 
 import br.com.dojo.tdd.exceptions.InvalidGradeProofException;
 import br.com.dojo.tdd.exceptions.InvalidStudentNameException;
@@ -16,7 +16,7 @@ public class SaveProof {
     private final SaveProofInDataBase saveProofInDataBase;
 
     @Autowired
-    private final ProccessProofStatus proccessProofStatus;
+    private final ProcessProofStatus processProofStatus;
 
     public Proof execute(final Proof proof) {
         proof.setStudentName(proof.getStudentName().trim());
@@ -29,7 +29,7 @@ public class SaveProof {
         if (grade < 0 || grade > 10)
             throw new InvalidGradeProofException();
 
-        proof.setStatus(proccessProofStatus.execute(proof.getGrade()));
+        proof.setStatus(processProofStatus.execute(proof.getGrade()));
 
         return this.saveProofInDataBase.execute(proof);
     }
