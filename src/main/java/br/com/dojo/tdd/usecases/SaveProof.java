@@ -1,4 +1,4 @@
-package br.com.dojo.tdd.unit.test.usecases;
+package br.com.dojo.tdd.usecases;
 
 import br.com.dojo.tdd.exceptions.InvalidGradeProofException;
 import br.com.dojo.tdd.exceptions.InvalidStudentNameException;

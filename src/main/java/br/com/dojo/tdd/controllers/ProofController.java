@@ -2,7 +2,7 @@ package br.com.dojo.tdd.controllers;
 
 import br.com.dojo.tdd.controllers.converters.ProofDTOConverter;
 import br.com.dojo.tdd.controllers.dtos.ProofDTO;
-import br.com.dojo.tdd.unit.test.usecases.SaveProof;
+import br.com.dojo.tdd.usecases.SaveProof;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
